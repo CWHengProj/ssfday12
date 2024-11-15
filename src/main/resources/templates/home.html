@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>This is home!</h1>
+    <div>
+        <img width="30%" height="30%" src="https://picsum.photos/200"><br/>
+        <p>The current time is :</p>
+        <span th:text="${currTime}"></span>
+        <div data-th-if="${currHour le 12}">
+            Good Morning
+        </div>
+        <div data-th-unless="${currHour le 12}">
+            Good Afternoon
+        </div>
+        </div>
+</body>
+</html>
